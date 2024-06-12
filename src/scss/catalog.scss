@@ -1,0 +1,149 @@
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+// .jost-<uniquifier> {
+//     font-family: "Jost", sans-serif;
+//     font-optical-sizing: auto;
+//     font-weight: <weight>;
+//     font-style: normal;
+//   }
+//
+@import "./varibles.scss";
+@import "./header.scss";
+@import "./footer.scss";
+
+main {
+    max-width: 2560px;
+    width: 100%;
+}
+@media screen and (min-width: 2560px) {
+    main {
+        margin: auto;
+    }
+}
+@import "./mainsec.scss";
+// All_products
+.All_products {
+    padding: 59px 40px 100px 40px;
+    width: 100%;
+    .All_products_container {
+        h1 {
+            @include ft(40px, $bl, 30px, 600);
+            margin-bottom: 59px;
+        }
+        width: 100%;
+        .All_categories {
+            @include flex(space-between, center, row);
+            flex-wrap: wrap;
+            .category_items {
+                margin-bottom: 40px;
+                width: 32%;
+                height: 408px;
+                overflow: hidden;
+                position: relative;
+                border-radius: 20px;
+                background-color: #e9e9e9;
+                img {
+                    width: 100%;
+                    height: inherit;
+                    object-fit: contain;
+                    left: 50%;
+                    top: 0;
+                    position: absolute;
+                    transform: translateX(-50%);
+                }
+                .left_dicription {
+                    position: absolute;
+                    bottom: 40.78px;
+                    left: 40px;
+                    z-index: 3;
+                    h4 {
+                        @include ft(30px, $bl, 42px, 600);
+                    }
+                    a {
+                        @include ft(16px, $bl, 26px, 600);
+                        position: relative;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            height: 1px;
+                            width: 100%;
+                            background-color: $bl;
+                            bottom: -20%;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1440px) {
+    .All_products {
+        .All_products_container {
+            .All_categories {
+                .category_items {
+                    width: 48%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    .All_products {
+        .All_products_container {
+            .All_categories {
+                justify-content: center;
+                .category_items {
+                    width: 600px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .All_products {
+        .All_products_container {
+            .All_categories {
+                justify-content: center;
+                .category_items {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 520px) {
+    .All_products {
+        .All_products_container {
+            .All_categories {
+                justify-content: center;
+                .category_items {
+                    height: 340px;
+                    img {
+                        width: 80%;
+                        height: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 420px) {
+    .All_products {
+        .All_products_container {
+            .All_categories {
+                justify-content: center;
+                .category_items {
+                    height: 275px;
+                    img {
+                        width: 200px;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+@import "./feedback.scss";

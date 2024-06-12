@@ -1,0 +1,94 @@
+//aside
+aside {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    max-width: 2560px;
+    width: 100%;
+    height: 330px;
+    background-image: url(../images/hedar_photo.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include flex(center, center, column);
+    .links {
+        width: 139px;
+        height: 84px;
+        p {
+            @include ft(44px, $bl, 50px, 600);
+        }
+        .navlinks {
+            height: 22px;
+            @include flex(space-between, center, row);
+            a {
+                @include flex(center, center, row);
+                @include ft(14px, $bl, 22px, 400);
+                img {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 2560px){
+    aside {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+  }
+@media screen and (max-width: 1600px) {
+    aside {
+        height: 300px;
+        justify-content: flex-end;
+        background-size: cover;
+    }
+}
+@media screen and (max-width: 1440px) {
+    aside {
+        background-size: cover;
+        height: 270px;
+    }
+}
+@media screen and (max-width: 1520px) {
+    aside {
+        height: 280px;
+    }
+}
+@media screen and (max-width: 1440px) {
+    aside {
+        height: 260px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    aside {
+        height: 240px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    aside {
+        height: 240px;
+    }
+}
+@media screen and (max-width: 1140px) {
+    aside {
+        height: 220px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    aside {
+        height: 200px;
+    }
+}
+@media screen and (max-width: 880px) {
+    aside {
+        height: 180px;
+    }
+}
+@media screen and (max-width: 768px) {
+    aside {
+        height: 160px;
+    }
+}

@@ -1,0 +1,301 @@
+// Foter
+footer {
+    max-width: 2560px;
+    width: 100%;
+    background-color: #f7f7f7;
+    height: 367px;
+    .footer_container {
+      margin: auto;
+      width: 67.1875%;
+      height: 367px;
+      .footer_top {
+        @include flex(space-between, flex-start, row);
+        padding-top: 70px;
+        height: 320px;
+        .first {
+          width: 300px;
+          height: 156px;
+          @include flex(space-between, flex-start, column);
+          .footer_adress {
+            @include flex(space-between, flex-start, column);
+            .footer_adresses {
+              gap: 12px;
+              width: 300px;
+              @include flex(space-between, flex-start, row);
+              strong {
+                width: 80px;
+                @include ft(16px, $bl, 26px, 600);
+              }
+              a {
+                width: 220px;
+                @include ft(16px, $bl, 26px, 400);
+              }
+            }
+          }
+        }
+        .second {
+          width: 560px;
+          height: 157px;
+          padding-top: 48px;
+          padding-left: 25px;
+          display: flex;
+          flex-direction: row;
+          .second_footer_link_left {
+            @include flex(space-between, flex-start, column);
+            margin-right: 205px;
+            a {
+              @include ft(14px, $bl, 22px, 400);
+            }
+          }
+          .second_footer_link_right {
+            @include flex(space-between, flex-start, column);
+            a {
+              @include ft(14px, $bl, 22px, 400);
+            }
+          }
+        }
+        .third {
+          width: 300px;
+          height: 200px;
+          h4 {
+            @include ft(20px, $bl, 20px, 600);
+            margin-bottom: 12px;
+          }
+          p {
+            @include ft(14px, $bl, 22px, 400);
+            margin-bottom: 16px;
+          }
+          .sends {
+            background-color: $main;
+            padding: 4px 4px 4px 16px;
+            border: 1px solid $grey2;
+            @include flex(space-between, center, row);
+            border-radius: 12px;
+            height: 52px;
+            margin-bottom: 16px;
+            button {
+              width: 44px;
+              height: 44px;
+              background-color: $bl;
+              border-radius: 12px;
+              outline: none;
+              border: none;
+            }
+            input {
+              background-color: transparent;
+              outline: none;
+              border: none;
+              width: 250px;
+              &::placeholder {
+                @include ft(12px, $grey2, 22px, 400);
+              }
+            }
+          }
+          .links_imges {
+            a {
+              margin-right: 24px;
+            }
+          }
+        }
+      }
+      .footer_bottom {
+        height: 46px;
+        border-top: 1px solid $grey2;
+        @include flex(space-between, center, row);
+        .bottom_left_side {
+          @include flex(space-between, center, row);
+          #languages {
+            border: none;
+            background-color: transparent;
+            outline: none;
+            option {
+              border: none;
+              outline: none;
+            }
+          }
+          p {
+            @include ft(14px, #696c70, 22px, 400);
+            margin-right: 36px;
+          }
+        }
+        .bottom_right_side {
+          a {
+            font-family: "Rubik", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            color: #0049b1;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 2560px){
+    footer {
+      margin: auto;
+    }
+  }
+  @media screen and (max-width: 1750px) {
+    footer {
+      .footer_container {
+        width: 80%;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 1504px) {
+    footer {
+      .footer_container {
+        .footer_top {
+          .second {
+            width: 320px;
+            padding-left: 5px;
+            .second_footer_link_left {
+              margin-right: 150px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    footer {
+      .footer_container {
+        .footer_top {
+          .second {
+            width: 310px;
+            padding-left: 5px;
+            .second_footer_link_left {
+              margin-right: 105px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1330px) {
+    footer {
+      .footer_container {
+        .footer_top {
+          .second {
+            .second_footer_link_left {
+              margin-right: 55px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1240px) {
+    footer {
+      height: 495px;
+      .footer_container {
+        height: fit-content;
+        .footer_top {
+          height: 455px;
+          flex-wrap: wrap;
+          .first {
+            .footer_logo {
+              a {
+                img {
+                  width: 250px;
+                }
+              }
+            }
+          }
+          .second {
+            height: 115px;
+            padding-top: 0;
+            order: 1;
+            .second_footer_link_left {
+              margin-right: 55px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1020px) {
+    footer {
+      .footer_container {
+        width: 80%;
+      }
+    }
+  }
+  @media screen and (max-width: 844px) {
+    footer {
+      .footer_container {
+        width: 90%;
+      }
+    }
+  }
+  @media screen and (max-width: 670px) {
+    footer {
+      height: fit-content;
+      .footer_container {
+        .footer_top {
+          height: fit-content;
+          gap: 40px;
+          @include flex(space-between, center, column);
+          .first {
+            width: 280px;
+          }
+          .second {
+            order: 0;
+            padding-left: 16px;
+          }
+          .third {
+            padding-left: 10px;
+          }
+        }
+        .footer_bottom {
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 420px) {
+    footer {
+      .footer_container {
+        .footer_bottom {
+          #languages {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 340px) {
+    footer {
+      .footer_container {
+        .footer_top {
+          .first {
+            .footer_adress {
+              .footer_adresses {
+                width: 280px;
+              }
+            }
+          }
+          .second {
+            width: 280px;
+          }
+          .third {
+            padding-left: 0px;
+            width: 280px;
+            .links_imges {
+              width: fit-content;
+            }
+            p {
+              width: 280px;
+            }
+            .sends {
+              width: 280px;
+              input {
+                width: 200px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }

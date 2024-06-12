@@ -1,0 +1,259 @@
+@import "varibles";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import "./header.scss";
+@import "./footer.scss";
+@import "./aside.scss";
+
+header {
+    background-color: transparent;
+    .header_main {
+        background-color: transparent;
+        .header_main__menu {
+            .main-menu__search {
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+main {
+    max-width: 2560px;
+    width: 100%;
+    margin-top: 195px;
+}
+@media screen and (min-width: 2560px) {
+    main {
+        margin: auto;
+        .description{
+            padding-top: 0;
+        }
+    }
+    aside{
+        position: relative;
+        transform: translate(-50%, -116px);
+        .links{
+            position: relative;
+            top: 40%;
+            transform: translateY(-50%);
+        }
+    }
+}
+@media screen and (max-width: 1440px) {
+    main {
+        margin-top: 160px;
+    }
+}
+@media screen and (max-width: 1140px) {
+    main {
+        margin-top: 140px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    main {
+        margin-top: 120px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    main {
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width: 768px) {
+    main {
+        margin-top: 80px;
+    }
+}
+@media screen and (max-width: 540px) {
+    main {
+        margin-top: 40px;
+    }
+}
+.description {
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 130px;
+    .description_container {
+        width: 67.1875%;
+        margin: 0 auto;
+        .about_pisription {
+            h2 {
+                @include ft(36px, $bl, 40px, 600);
+                text-align: center;
+                margin-bottom: 28px;
+            }
+            p {
+                @include ft(18px, $bl, 28px, 400);
+                text-align: center;
+                margin: auto;
+                width: 80%;
+                margin-bottom: 92px;
+            }
+        }
+        .about_pisription_img {
+            @include flex(space-between, center, row);
+            flex-wrap: wrap;
+            .about_card {
+                .img_container {
+                    width: 410px;
+                    height: 546px;
+                    border-radius: 30px;
+                    background-color: $grey2;
+                    @include flex(center, center, row);
+                    margin-bottom: 100px;
+                }
+                .aboit_discript_card {
+                    width: 410px;
+                    padding: 0px 56px;
+                    @include flex(center, center, column);
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        margin-bottom: 20px;
+                    }
+                    h3 {
+                        @include ft(20px, $bl, 28px, 600);
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1817px) {
+    .description {
+        .description_container {
+            width: 80%;
+            .about_pisription_img {
+                .about_card {
+                    .img_container {
+                        margin-bottom: 80px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1600px) {
+    .description {
+        padding-bottom: 80px;
+        .description_container {
+            .about_pisription_img {
+                justify-content: space-evenly;
+                .about_card {
+                    margin-bottom: 80px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1280px) {
+    .description {
+        padding-bottom: 0px;
+        padding-top: 20px;
+        .description_container {
+            .about_pisription_img {
+                justify-content: space-between;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    .description {
+        .description_container {
+            .about_pisription_img {
+                justify-content: center;
+            }
+        }
+    }
+}
+@media screen and (max-width: 880px) {
+    .description {
+        .description_container {
+            .about_pisription {
+                h2 {
+                    font-size: 32px;
+                }
+                p {
+                    width: 100%;
+                    margin-bottom: 40px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .description {
+        width: 100%;
+        .description_container {
+            .about_pisription_img {
+                .about_card {
+                    .img_container {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 520px) {
+    .description {
+        .description_container {
+            .about_pisription {
+                h2 {
+                    font-size: 26px;
+                    margin-bottom: 16px;
+                }
+                p {
+                    margin-bottom: 20px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+            .about_pisription_img {
+                .about_card {
+                    @include flex(center, center, column);
+                    .img_container {
+                        width: 90%;
+                        height: fit-content;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 420px) {
+    .description {
+        .description_container {
+            .about_pisription {
+                h2 {
+                    font-size: 22px;
+                    margin-bottom: 16px;
+                }
+                p {
+                    text-align: left;
+                    font-size: 14px;
+                }
+            }
+            .about_pisription_img {
+                .about_card {
+                    @include flex(center, center, column);
+                    .img_container {
+                        width: 78%;
+                        height: fit-content;
+                    }
+                    .aboit_discript_card {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import "./swipSec.scss";

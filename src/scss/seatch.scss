@@ -1,0 +1,117 @@
+@import "./varibles.scss";
+@import "./header.scss";
+@import "./footer.scss";
+
+main {
+    max-width: 2560px;
+    width: 100%;
+    .search_container {
+        margin: auto;
+        width: 80%;
+        h1 {
+            padding: 20px;
+            text-align: center;
+            @include ft(80px, $bl, 88px, 500);
+        }
+        .search {
+            width: 100%;
+            @include flex(space-between, center, row);
+            flex-wrap: wrap;
+            gap: 16px;
+            .service-sw {
+                width: 30%;
+                height: 500px;
+                .sw-bg {
+                    height: 400px;
+                    background-color: #e9e9e9;
+                    border-radius: 16px;
+                    position: relative;
+                    background-image: url(../images/2.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    .service-sale {
+                        @include flex(center, center, row);
+                        width: 55px;
+                        height: 24px;
+                        position: absolute;
+                        left: 12px;
+                        top: 12px;
+                        background-color: $gr3;
+                        border-radius: 36px;
+                        @include ft(14px, $bl, 20px, 600);
+                        text-transform: uppercase;
+                    }
+                }
+                .swtxt {
+                    margin-top: 16px;
+                    .serv-sw-name {
+                        @include ft(16px, $bl, 24px, 500);
+                    }
+                    .serv-sw-price {
+                        @include ft(16px, $bl, 24px, 500);
+                        @include flex(start, center, row);
+                        gap: 8px;
+                        margin-top: 4px;
+                        .akc {
+                            @include ft(14px, $grey2, 22px, 400);
+                            text-decoration: line-through;
+                        }
+                        .skid-price {
+                            width: 51px;
+                            height: 24px;
+                            background-color: $gr3;
+                            @include flex(center, center, row);
+                            border-radius: 36px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 2560px) {
+    main {
+        margin: auto;
+    }
+}
+.red-sale {
+    background-color: #db4444 !important;
+    color: $wht !important;
+}
+.popular-sale {
+    background-color: #3bb900;
+    color: $wht !important;
+}
+
+.not_active {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+
+        .search_container {
+            .search {
+                flex-wrap: wrap;
+                .service-sw {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+
+        .search_container {
+            .search {
+                flex-wrap: wrap;
+                .service-sw {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
